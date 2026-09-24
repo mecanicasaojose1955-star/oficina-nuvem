@@ -1,0 +1,15 @@
+{
+  "name": "oficina-nuvem",
+  "version": "1.0.0",
+  "description": "Painel administrativo da oficina, versao nuvem (dados sincronizados)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "4.19.2"
+  }
+}

@@ -1,0 +1,102 @@
+==================================================================
+  OFICINA NA NUVEM — painel com dados sincronizados (PC + celular)
+==================================================================
+
+O QUE MUDOU
+-----------
+Antes o painel guardava tudo dentro do próprio aparelho. Agora ele
+funciona com um "servidor": os dados ficam guardados em UM lugar só, e
+tanto o computador quanto o celular veem exatamente a mesma informação.
+
+Login de entrada (o mesmo de antes):
+   Usuário: admin
+   Senha:   admin123
+(Troque a senha depois, em Configurações > Usuários.)
+
+
+==================================================================
+  CAMINHO 1 — O MAIS FÁCIL: rodar no computador da oficina
+  (grátis, sem criar conta, acessa do celular pela mesma internet)
+==================================================================
+
+Ideal se o computador da oficina fica ligado no horário de trabalho.
+O celular acessa pelo Wi-Fi da oficina.
+
+PASSO 1 — Instalar o "Node" (uma vez só)
+   Entre em  https://nodejs.org  e baixe a versão "LTS".
+   Instale clicando em avançar/avançar (nada de especial).
+
+PASSO 2 — Abrir a pasta e ligar o programa
+   - Coloque esta pasta (oficina-nuvem) em um lugar fácil, ex.: Área de
+     Trabalho.
+   - Windows: dentro da pasta, segure SHIFT e clique com o botão direito
+     num espaço vazio > "Abrir janela do PowerShell aqui" (ou Terminal).
+   - Mac: abra o app "Terminal", digite  cd  dê um espaço, arraste a
+     pasta para a janela e aperte Enter.
+   - Na janela preta que abriu, digite estes dois comandos, um por vez,
+     apertando Enter depois de cada:
+
+         npm install
+         npm start
+
+   Vai aparecer:  "Oficina na Nuvem rodando na porta 3000".
+   PRONTO. Deixe essa janela aberta enquanto usar o painel.
+
+PASSO 3 — Abrir no computador
+   Abra o navegador e entre em:   http://localhost:3000
+
+PASSO 4 — Abrir no celular (mesma internet/Wi-Fi da oficina)
+   - Descubra o "IP" do computador:
+       Windows: na janela preta digite  ipconfig  e procure
+                "Endereço IPv4", algo como 192.168.0.15
+       Mac: menu Ajustes > Wi-Fi > detalhes, veja o "Endereço IP".
+   - No celular, abra o navegador e digite (troque pelos seus números):
+       http://192.168.0.15:3000
+
+   O celular e o computador agora mostram os MESMOS dados. ✓
+
+Para desligar: feche a janela preta. Para ligar de novo depois: repita
+somente  npm start  (o "npm install" só precisa da primeira vez).
+
+
+==================================================================
+  CAMINHO 2 — ACESSAR DE QUALQUER LUGAR (pela internet)
+  colocando no ar num serviço grátis (Render)
+==================================================================
+
+Use se você quer acessar de casa, na rua, de outra cidade — não só
+dentro da oficina.
+
+1) Crie uma conta grátis em  https://render.com
+2) Crie também uma conta grátis em  https://github.com  e envie esta
+   pasta para um novo repositório (o próprio site do GitHub tem um botão
+   "upload files" — basta arrastar os arquivos).
+3) No Render, clique em  New +  >  Web Service  e ligue no seu
+   repositório do GitHub.
+4) Nas configurações o Render costuma preencher sozinho; confirme:
+       Build Command:  npm install
+       Start Command:  npm start
+   Escolha o plano "Free" e clique em Create.
+5) Em 1-2 minutos ele te dá um endereço tipo
+       https://oficina-nuvem.onrender.com
+   Esse link funciona em qualquer celular ou computador do mundo.
+
+IMPORTANTE (aviso honesto sobre o plano grátis do Render):
+ - No plano grátis, o serviço "dorme" quando ninguém usa; a primeira
+   abertura do dia pode demorar ~30 segundos. Depois fica normal.
+ - No plano grátis, se você reenviar/atualizar o programa, os dados
+   podem voltar ao exemplo inicial. Por isso, para uso de verdade:
+     -> faça backup pelo próprio painel (Configurações > baixar backup)
+        de vez em quando, OU
+     -> contrate no Render um "Disco" (bem barato) para os dados nunca
+        se perderem. Se quiser, me chame que eu te explico esse passo.
+
+
+==================================================================
+  SEGURANÇA (leia rápido)
+==================================================================
+- Troque a senha do admin logo no primeiro acesso.
+- Quem tiver o endereço e a senha consegue entrar. Use uma senha forte.
+- Faça backup dos dados de vez em quando (botão no painel).
+
+Qualquer dúvida, é só me chamar que eu te ajudo em cada passo.
