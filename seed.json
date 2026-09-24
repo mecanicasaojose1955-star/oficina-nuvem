@@ -1,0 +1,280 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Carlos Almeida",
+      "telefone": "(11) 98765-4321",
+      "marca": "Volkswagen",
+      "modelo": "Golf"
+    },
+    {
+      "id": 2,
+      "nome": "Fernanda Souza",
+      "telefone": "(11) 91234-5678",
+      "marca": "Fiat",
+      "modelo": "Argo"
+    },
+    {
+      "id": 3,
+      "nome": "Roberto Lima",
+      "telefone": "(21) 99888-1122",
+      "marca": "Toyota",
+      "modelo": "Corolla"
+    },
+    {
+      "id": 4,
+      "nome": "Juliana Martins",
+      "telefone": "(31) 98111-3344",
+      "marca": "Honda",
+      "modelo": "Civic"
+    },
+    {
+      "id": 5,
+      "nome": "Marcos Pereira",
+      "telefone": "(41) 99777-5566",
+      "marca": "Hyundai",
+      "modelo": "HB20"
+    }
+  ],
+  "ordens": [
+    {
+      "id": 1024,
+      "clienteId": 1,
+      "descricao": "Troca de óleo e filtros",
+      "status": "concluida",
+      "entrada": "2025-09-15",
+      "mecanico": "José Silva",
+      "valor": 380,
+      "pago": true,
+      "formaPagamento": "PIX"
+    },
+    {
+      "id": 1025,
+      "clienteId": 3,
+      "descricao": "Revisão dos freios (pastilhas + discos)",
+      "status": "em_andamento",
+      "entrada": "2025-09-20",
+      "mecanico": "André Santos",
+      "valor": 950,
+      "pago": false,
+      "formaPagamento": "Não definido"
+    },
+    {
+      "id": 1026,
+      "clienteId": 4,
+      "descricao": "Diagnóstico luz do motor",
+      "status": "aguardando",
+      "entrada": "2025-09-22",
+      "mecanico": "José Silva",
+      "valor": 180,
+      "pago": false,
+      "formaPagamento": "Não definido"
+    },
+    {
+      "id": 1027,
+      "clienteId": 2,
+      "descricao": "Alinhamento e balanceamento",
+      "status": "em_andamento",
+      "entrada": "2025-09-23",
+      "mecanico": "Paulo Rocha",
+      "valor": 220,
+      "pago": false,
+      "formaPagamento": "Não definido"
+    },
+    {
+      "id": 1028,
+      "clienteId": 5,
+      "descricao": "Troca de correia dentada",
+      "status": "aguardando",
+      "entrada": "2025-09-24",
+      "mecanico": "André Santos",
+      "valor": 1250,
+      "pago": false,
+      "formaPagamento": "Não definido"
+    },
+    {
+      "id": 1023,
+      "clienteId": 1,
+      "descricao": "Reparo ar-condicionado",
+      "status": "concluida",
+      "entrada": "2025-09-10",
+      "mecanico": "Paulo Rocha",
+      "valor": 640,
+      "pago": true,
+      "formaPagamento": "Cartão de crédito"
+    }
+  ],
+  "agenda": [
+    {
+      "id": 1,
+      "clienteId": 2,
+      "servico": "Revisão dos 30.000 km",
+      "data": "2025-09-24",
+      "hora": "09:00",
+      "mecanico": "José Silva"
+    },
+    {
+      "id": 2,
+      "clienteId": 4,
+      "servico": "Troca de embreagem",
+      "data": "2025-09-24",
+      "hora": "11:30",
+      "mecanico": "André Santos"
+    },
+    {
+      "id": 3,
+      "clienteId": 1,
+      "servico": "Diagnóstico eletrônico",
+      "data": "2025-09-24",
+      "hora": "14:00",
+      "mecanico": "Paulo Rocha"
+    },
+    {
+      "id": 4,
+      "clienteId": 5,
+      "servico": "Alinhamento",
+      "data": "2025-09-25",
+      "hora": "10:00",
+      "mecanico": "José Silva"
+    }
+  ],
+  "estoque": [
+    {
+      "id": 1,
+      "nome": "Óleo 5W30 Sintético (1L)",
+      "categoria": "Lubrificantes",
+      "qtd": 42,
+      "minimo": 15,
+      "preco": 45.9
+    },
+    {
+      "id": 2,
+      "nome": "Filtro de Óleo",
+      "categoria": "Filtros",
+      "qtd": 8,
+      "minimo": 10,
+      "preco": 28.5
+    },
+    {
+      "id": 3,
+      "nome": "Pastilha de Freio Dianteira",
+      "categoria": "Freios",
+      "qtd": 24,
+      "minimo": 12,
+      "preco": 120
+    },
+    {
+      "id": 4,
+      "nome": "Correia Dentada",
+      "categoria": "Motor",
+      "qtd": 5,
+      "minimo": 6,
+      "preco": 185
+    },
+    {
+      "id": 5,
+      "nome": "Vela de Ignição",
+      "categoria": "Motor",
+      "qtd": 60,
+      "minimo": 20,
+      "preco": 22
+    },
+    {
+      "id": 6,
+      "nome": "Filtro de Ar",
+      "categoria": "Filtros",
+      "qtd": 18,
+      "minimo": 10,
+      "preco": 35
+    },
+    {
+      "id": 7,
+      "nome": "Bateria 60Ah",
+      "categoria": "Elétrica",
+      "qtd": 4,
+      "minimo": 5,
+      "preco": 420
+    }
+  ],
+  "mecanicos": [
+    "José Silva",
+    "André Santos",
+    "Paulo Rocha"
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "perfil": "Administrador",
+      "login": "admin",
+      "senhaHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"
+    },
+    {
+      "id": 2,
+      "nome": "Recepção",
+      "perfil": "Atendente",
+      "login": "recepcao",
+      "senhaHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
+    }
+  ],
+  "config": {
+    "nomeSite": "Oficina",
+    "subtitulo": "Painel Admin",
+    "pagamentos": [
+      "Dinheiro",
+      "PIX",
+      "Cartão de crédito",
+      "Cartão de débito",
+      "Boleto",
+      "Transferência"
+    ],
+    "categorias": [
+      "Lubrificantes",
+      "Filtros",
+      "Freios",
+      "Motor",
+      "Elétrica",
+      "Suspensão",
+      "Pneus"
+    ],
+    "cor": "#2563eb",
+    "telefone": "",
+    "endereco": "",
+    "cnpj": "",
+    "email": "",
+    "abertura": "08:00",
+    "fechamento": "18:00",
+    "dias": "Segunda a sexta",
+    "horaAbertura": "08:00",
+    "horaFechamento": "18:00",
+    "diasFuncionamento": "Segunda a Sexta",
+    "a11yUI": {
+      "escala": true,
+      "escuro": true,
+      "contraste": true,
+      "animacoes": true,
+      "teclado": true,
+      "botao": "topbar"
+    },
+    "permissoes": {
+      "Atendente": [
+        "dashboard",
+        "clientes",
+        "ordens",
+        "agenda",
+        "estoque"
+      ],
+      "Mecânico": [
+        "dashboard",
+        "ordens",
+        "agenda"
+      ]
+    },
+    "contato": {
+      "endereco": "",
+      "telefone": "",
+      "cnpj": ""
+    }
+  },
+  "financeiro": []
+}
