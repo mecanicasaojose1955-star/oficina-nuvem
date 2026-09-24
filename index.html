@@ -677,10 +677,7 @@ function viewRelatorios(){
   DB.ordens.forEach(o=>{ const k=ym(o.entrada); if(!k) return; const m=meses[k]=meses[k]||{bruto:0,desc:0,liq:0,n:0}; m.bruto+=Number(o.valor)||0; m.desc+=Number(o.desconto)||0; m.liq+=totalOS(o); m.n++; });
   const keys=Object.keys(meses).sort();
   const max=Math.max(1,...keys.map(k=>meses[k].liq));
-  const barras=keys.map(k=>`<div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;min-width:44px"><div style="font-size:11px;color:var(--muted)">${brl(meses[k].liq).replace('R
-</body>
-</html>
-,'').trim()}</div><div style="width:100%;max-width:46px;height:${Math.round(meses[k].liq/max*150)+4}px;background:var(--brand);border-radius:6px 6px 0 0"></div><div style="font-size:11px;font-weight:600">${ymLabel(k)}</div></div>`).join('');
+  const barras=keys.map(k=>`<div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;min-width:44px"><div style="font-size:11px;color:var(--muted)">${brl(meses[k].liq).replace('R$','').trim()}</div><div style="width:100%;max-width:46px;height:${Math.round(meses[k].liq/max*150)+4}px;background:var(--brand);border-radius:6px 6px 0 0"></div><div style="font-size:11px;font-weight:600">${ymLabel(k)}</div></div>`).join('');
   const linhas=keys.slice().reverse().map(k=>`<tr><td>${ymLabel(k)}</td><td>${meses[k].n}</td><td>${brl(meses[k].bruto)}</td><td><span style="color:#b45309">${meses[k].desc>0?'-'+brl(meses[k].desc):'—'}</span></td><td><strong>${brl(meses[k].liq)}</strong></td></tr>`).join('');
   // fiado por cliente (ordens não pagas)
   const fi={}; DB.ordens.filter(o=>!o.pago).forEach(o=>{ fi[o.clienteId]=(fi[o.clienteId]||0)+totalOS(o); });
